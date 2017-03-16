@@ -1,0 +1,4 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["+p0mO"]); }
+
+__d('BanzaiLogger',['Banzai'],(function a(b,c,d,e,f,g){var h='logger';function i(k){return {log:function l(m,n){c('Banzai').post(j._getRoute(m),n,k);},registerToSendWithBeacon:function l(m,n,o,p){c('Banzai').registerToSendWithBeacon(j._getRoute(m),n,o,p);},_getRoute:function l(m){return h+':'+m;}};}var j=i();j.create=i;f.exports=j;}),null);
+__d('FbtLoggerImpl',['BanzaiLogger','ScriptPath'],(function a(b,c,d,e,f,g){var h={logImpression:function i(j){c('BanzaiLogger').log('FbtImpressionsLoggerConfig',{hash:j,sample_rate:100,script_path:c('ScriptPath').getScriptPath()});}};f.exports=h;}),null);
